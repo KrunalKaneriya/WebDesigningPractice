@@ -130,51 +130,51 @@
 //*Filter Function
 //*Filter function accepts a callback function and it has some condition in it and if that condition is satisfied then the element is added into new array otherwise it is discarded and it is useful in filtering options..
 
-let movies = [
-            {
-                name:"Amadeus",
-                score:90,
-                year:2000
-            },
+// let movies = [
+//             {
+//                 name:"Amadeus",
+//                 score:90,
+//                 year:2000
+//             },
         
-            {
-                name:"Divine",
-                score:50,
-                year:2012,
-            },
+//             {
+//                 name:"Divine",
+//                 score:50,
+//                 year:2012,
+//             },
         
-            {
-                name:"Venom",
-                score:76,
-                year:2018
-            },
+//             {
+//                 name:"Venom",
+//                 score:76,
+//                 year:2018
+//             },
         
-            {
-                name:"Dr Strange",
-                score:95,
-                year:2020
-            },
+//             {
+//                 name:"Dr Strange",
+//                 score:95,
+//                 year:2020
+//             },
         
-            {
-                name:"Avengers Endgame",
-                score:99,
-                year:2021
-            },
+//             {
+//                 name:"Avengers Endgame",
+//                 score:99,
+//                 year:2021
+//             },
 
-            {
-                name:"Parasite",
-                score:85,
-                year:2019
-            },
+//             {
+//                 name:"Parasite",
+//                 score:85,
+//                 year:2019
+//             },
 
-            {
-                name:"Alien",
-                score:90,
-                year:1980
-            }
+//             {
+//                 name:"Alien",
+//                 score:90,
+//                 year:1980
+//             }
 
 
-        ]
+//         ]
 
 // const newMovies = movies.filter(movie => movie.year>2000)
 
@@ -202,3 +202,74 @@ const score = [100,80,65,85,66,45,50,84,71,69,82,74];
 score.some(number => number>=99); //It returns true because 100 is > 99
 
 score.every(number => number>=15) //It returns false because there are num < 50
+
+//***************************************Reduce Method *************************************** */
+//*This method contains two parameters previous value and current value and we need to write the
+//*function which will return one value because reduce method only returns one value from whole
+//*array
+
+let minfunc = [0.01,445.45,1154.45,12.1,65.32,0.54,0.82,1.21,0.21,1.2];
+
+const reduceTotal = minfunc.reduce((prevValue,currValue) => {
+    let total = prevValue+currValue;
+    return total;
+})
+
+const minvalue = minfunc.reduce( (minValue,currValue) => {
+    if(currValue<minValue) {
+        return currValue;
+    }
+    return minValue
+
+})
+
+let movies = [
+    {
+        name:"Amadeus",
+        score:90,
+        year:2000
+    },
+
+    {
+        name:"Divine",
+        score:50,
+        year:2012,
+    },
+
+    {
+        name:"Venom",
+        score:76,
+        year:2018
+    },
+
+    {
+        name:"Dr Strange",
+        score:95,
+        year:2020
+    },
+
+    {
+        name:"Avengers Endgame",
+        score:99,
+        year:2021
+    },
+
+    {
+        name:"Parasite",
+        score:85,
+        year:2019
+    },
+
+    {
+        name:"Alien",
+        score:90,
+        year:1980
+    }
+]
+
+let bestmovie = movies.reduce((bestmov,currmov) => {
+    if(currmov.score > bestmov.score) {
+        return currmov
+    }
+    return bestmov
+})
