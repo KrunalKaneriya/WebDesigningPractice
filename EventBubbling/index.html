@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Event Bubbling</title>
+
+    <style>
+        .hide {
+            display:none;
+        }
+    </style>
+</head>
+<body>
+
+    
+    <section id = "section" onclick="alert('Section Clicked')">
+        <p onclick="alert('Paragraph Clicked')">
+            This is A Paragraph
+            <button onclick = "alert('Button is Clicked')">
+                Click Me
+            </button>
+        </p>
+    </section>
+
+    <div id="container">
+        Click To Hide
+        <button id = "changeColor">
+            Change Color
+        </button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
