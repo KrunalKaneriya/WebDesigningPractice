@@ -1,0 +1,13 @@
+body {
+    text-align: center;
+    font-family:"Consolas";
+    font-weight: 100;
+}
+
+.winner {
+    color:green;
+}
+
+.loser {
+    color:red;
+}
