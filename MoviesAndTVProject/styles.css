@@ -1,0 +1,70 @@
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "SF Pro Display";
+}
+
+#navbar {
+    width:100%;
+    height:100px;
+    background-color: #2a2a2a;
+}
+
+body {
+    background-color: #2a2a2a;
+}
+
+#name {
+    position:absolute;
+    right:10%;
+    top:5%;
+    height:5%;
+    border-radius: 10px;
+    border: none;
+    background-color: #2a2a2a;
+    color:white;
+}
+
+section {
+    display: flex;
+    justify-content:flex-start;
+    align-items: baseline;
+    flex-wrap: wrap;
+    margin:20px 20px;
+    
+}
+
+div {
+    height:350px;
+    width:200px;
+    display: inline-block;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    margin:25px;
+    
+}
+span {
+    display: block;
+    color:white;
+}
+img {
+    width:100%;
+    object-fit: cover;
+}
+
+.movie-info {
+    color:white;
+    width: inherit;
+    height:80px;
+    display: flex;
+    align-items:center;
+    justify-content: space-evenly;
+    margin:0;
+    font-size:13px;
+    background-color: #2f2f2f;
+}
+
+#maindiv {
+    box-shadow: 11px 10px 5px -6px rgba(0,0,0,0.12);
+}

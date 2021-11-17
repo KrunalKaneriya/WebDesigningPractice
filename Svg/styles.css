@@ -1,0 +1,90 @@
+body  {
+    text-align: center;
+    background-color: #111111;
+}
+.c-cornea {
+    animation : cornea 8s ease-out infinite alternate;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+#svg {
+    animation: loadup 0.5s ease-in-out;
+}
+svg {
+    animation:svgimage 3s infinite alternate cubic-bezier(.02,.43,.9,.91);
+}
+
+@keyframes loadup {
+    from {
+        opacity: 0;
+        transform:translateY(20%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+@keyframes svgimage {
+    from{
+        transform:translateY(0%);
+    }
+    to {
+        transform:translateY(10%);
+    }
+}
+@keyframes cornea {
+    0% {
+        transform:scale(1) translateY(0) translateX(0);
+    }
+    10% {
+        transform:scale(1) translateY(0) translateX(-40%);
+    }
+    20%{
+        transform:scale(1) translateY(-20%) translateX(-40%);
+    }
+    30% {
+        transform:scale(1) translateY(20%) translateX(-40%);
+    }
+    35% {
+        transform:scale(1) translateY(0) translateX(-40%);
+        
+    }
+
+    40%{
+        transform:scale(1) translateY(0) translateX(0);
+    }
+    50% {
+        transform:scale(0.6) translateY(0) translateX(0);
+    }
+    
+    60%{
+        transform:scale(0.6) translateX(100%) translateY(0);
+    }
+    70% {
+        transform:scale(0.6) translateX(100%) translateY(-50%);
+    }
+    75% {
+        transform:scale(0.6) translateX(100%) translateY(50%);
+    }
+
+    77% {
+        transform:scale(1) translateX(0) translateY(0);
+    }
+    
+    80%{
+        transform:scale(1.4) translateX(0) translateY(0);
+    }
+    85% {
+        transform:scale(1.2) translateX(50%) translateY(0);
+    }
+    90%{
+        transform:scale(1.2) translateX(-50%) translateY(0);
+    }
+    95% {
+        transform:scale(1.2) translateX(0) translateY(0);   
+    }
+    100%{
+        transform:scale(1) translateX(0) translateY(0);
+    }
+}
