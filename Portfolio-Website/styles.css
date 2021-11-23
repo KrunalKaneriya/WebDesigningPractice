@@ -130,6 +130,7 @@ header h3 {
 
 #page1 {
     background-color: #1d1d1f;
+    opacity:0.9;
     position:relative;
 }
 
@@ -143,6 +144,7 @@ header h3 {
 
 .top-page {
     margin-top:50px;
+    margin-bottom:50px;
     width:inherit;
     height:inherit;
     display:flex;
@@ -187,7 +189,7 @@ header h3 {
 .h2-sub-heading{
     font-weight: 600;
     font-size:35px;
-    letter-spacing: -.025em;
+    letter-spacing: -.020em;
     color:white;
     text-align: center;
     display: inline-block;
@@ -270,14 +272,20 @@ header h3 {
     background-color: white;
 } */
 
-.text-underline-animation {
 
-}
 
 /***************************About Section************************/
+.about-page {
+    background-color: #2c2c2e3b;
+        border:1px solid hsla(0,0%,51.4%,.16);
+        border-radius: 20px;
+        width:95%;
+}
 #about-me-div {
     justify-content: center;
     align-items: center;
+    width:45%;
+    
 }
 #about-me-title {
     position:relative;
@@ -321,6 +329,53 @@ header h3 {
     opacity: 0;
 }
 
+/*******************************Quotes of The Day Section*******************************/
+
+.third-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.quotes-of-the-day-container,.languages-known-container {
+    width:45%;
+    height:47vh;
+    background-color: #2c2c2e3b;
+    border: 1px solid hsla(0,0%,51.4%,.16);
+    border-radius: 20px;
+    padding:50px;
+    margin-bottom: 20px;
+    
+}
+
+.quotes-heading, .languages-known-heading{
+    font-size:40px;
+    color:rgba(255, 255, 255);
+    text-align: left;
+    letter-spacing: -.025em;
+}
+
+.quote,.languages {
+    font-size:30px;
+    margin-top:60px;
+    color:rgba(255, 255, 255,0.8);
+
+}
+.languages{
+    animation: languages 3s infinite ease;
+    opacity: 0;
+}
+
+@keyframes languages {
+    from{
+        opacity:0
+    }
+    to {
+        
+        opacity:1;
+    }
+}
+
 /*************************Media Queries*************************/
 @media (min-width: 375px) and (max-width: 700px) {
 
@@ -350,14 +405,17 @@ header h3 {
 
     .about-page {
         flex-direction: column;
+        background-color: #2c2c2e3b;
+        border:1px solid hsla(0,0%,51.4%,.16);
+        width:95%;
     }
     #about-me-title{
-        font-size:50px;
+        font-size:75px;
     }
 
     #about-me-title::after {
         bottom: -5px;
-        width:160px;
+        width:220px;
     }
     @keyframes about-me-title-animation{
         from{
@@ -365,12 +423,13 @@ header h3 {
         }
 
         to{
-            width:160px;
+            width:220px;
         }
     }
 
     #about-me-div {
         height: 50vh;
+        width:100%;
     }
     .half-page{
         width:100%;
@@ -378,7 +437,7 @@ header h3 {
     }
 
     .info {
-        font-size:20px;
+        font-size:18px;
         font-weight:500;
 
     }
@@ -388,7 +447,16 @@ header h3 {
     }
 
     .info {
-        letter-spacing: normal;
-        padding:40px;
+        padding:25px;
+    }
+
+    .third-section {
+        flex-direction: column;
+    }
+
+    .quotes-of-the-day-container, .languages-known-container {
+        width:95%;
+        height:45vh;
+        margin-bottom:20px;
     }
 }

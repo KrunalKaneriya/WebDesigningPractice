@@ -1,6 +1,7 @@
 const scrollElement = document.querySelector(".scroll-container");
 const scrollOffset = 350;
 
+
 const getWindowHeight = () => {
     return window.innerHeight;
 }
@@ -58,3 +59,26 @@ window.addEventListener("scroll",() => {
 //         }
 //     })
 // }
+
+let element = document.querySelector(".languages");
+var languages = ["CSS","Javascript","Java","C++","C","ASP.NET","Visual Basic","PHP"];
+let i=0;
+const iterateLanguages = () => {
+    setInterval(() => {
+        
+        element.innerHTML = languages[i];
+        
+        i++;
+        if(i>=languages.length) {
+            i=0;
+        }
+    },3000)
+
+    
+};
+
+
+
+iterateLanguages();
+
+/*********************Shapes Animation*********************/
