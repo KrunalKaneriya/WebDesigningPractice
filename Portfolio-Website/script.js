@@ -81,4 +81,16 @@ const iterateLanguages = () => {
 
 iterateLanguages();
 
-/*********************Shapes Animation*********************/
+
+anime ({
+    targets:"#circle",
+    keyframes:[
+        {scale:2},
+        {translateZ:360}
+    ],
+    duration:1000,
+    
+    
+    direction:'alternate',
+    loop:'true'
+})
