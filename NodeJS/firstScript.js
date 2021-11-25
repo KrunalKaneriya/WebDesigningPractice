@@ -7,3 +7,5 @@ function timeOut() {
         console.log("One Second is Passed...");
     },1000)
 }
+
+timeOut();
