@@ -1,0 +1,16 @@
+<%- include("partials/header") %>
+
+    <section id="compose">
+        <h1>Compose Journal</h1>
+
+        <form action="/" method="post">
+            <label for="title" class="form-label">Title</label>
+            <input type="text" name="title" id="title" class = "form-control">
+
+            <label for="post" class = "form-label mt-3">Post</label>
+            <textarea name="post" id="post" cols="28" rows="8" class="form-control"></textarea>
+
+            <button type="submit" class="btn btn-primary mt-4">Publish</button>
+        </form>
+    </section>
+<%- include("partials/footer") %>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include("partials/head") %> 
+</head>
+
+<body>
+    <%- include("partials/navbar") %> 
+    <h1>All the cats</h1>
+    <!-- <p><%= cats %></p> -->
+
+    <ul>
+        <%for(let cat of cats) { %>
+            <li>
+                <%=cat%>
+            </li>
+            <% } %>
+    </ul>
+
+   
+</body>
+
+</html>
