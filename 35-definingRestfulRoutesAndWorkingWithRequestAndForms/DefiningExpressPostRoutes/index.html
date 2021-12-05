@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POST AND GET</title>
+</head>
+<body>
+    <h1>Working With Requests</h1>
+    <h2>Post Request</h2>
+    <form action="http://localhost:3000/tacos" method="post">
+        Flavour:
+        <input type="text" name="flavour" id="flavourpost">
+        Quantity:
+        <input type="number" name="quantity" id="quantitypost">
+        <input type="submit" value="submit">
+    </form>
+
+    <h2>Get Request</h2>
+    <form action="http://localhost:3000/tacos" method="get">
+        Flavour:
+        <input type="text" name="flavour" id="flavourget">
+        Quantity:
+        <input type="number" name="quantity" id="quantityget">
+        <input type="submit" value="submit">
+    </form>
+
+    <script src="index.js"></script>
+</body>
+</html>
