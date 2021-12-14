@@ -1,0 +1,23 @@
+<%- include("partials/header") %>
+
+    <section id="compose">
+       <h1><%= foundProduct.name %> </h1>
+
+
+    
+         
+    
+
+       
+
+        <form action="/post/<%= foundProduct._id %>/?_method=PUT" method="post">
+            <label for="title" class="form-label"><%= foundProduct.name %></label>
+            <input type="text" name="title" id="title" class = "form-control" value = "<%= foundProduct.name %>" >
+
+            <label for="post" class = "form-label mt-3">Post</label>
+            <textarea name="post" id="post" cols="28" rows="8" class="form-control"><%=foundProduct.post%></textarea>
+
+            <button type="submit" class="btn btn-primary mt-4">Publish</button>
+        </form>
+    </section>
+<%- include("partials/footer") %>
