@@ -16,7 +16,7 @@ app.use(methodOverride("_method"));
 
 /***************************************Mongoose Section************************************/
 
-mongoose.connect("mongodb://localhost:27017/posts",{useNewUrlParser:true,useUnifiedTopology:true})
+mongoose.connect("mongodb+srv://Admin-Krunal:qwertyuiop0000@cluster0.k45me.mongodb.net/posts",{useNewUrlParser:true,useUnifiedTopology:true})
     .then(() => {
         console.log("Connection Open:Mongodb");
     })
@@ -33,7 +33,7 @@ mongoose.connect("mongodb://localhost:27017/posts",{useNewUrlParser:true,useUnif
 
 
 //*Listening To The Express Port
-app.listen(3000,() => {
+app.listen(process.env.PORT || 3000, () => {
     console.log("Running Server At Port 3000");
 })
 
