@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Today Date</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-blue-300 blur-md">
+
+    <div class="max-w-md mx-auto mt-16 bg-purple-600 rounded-xl p-5 shadow-lg hover:bg-purple-700">
+        <h1 class="text-center text-3xl text-white font-bold font-sans">
+            <%= listTitle %>
+        </h1>
+
+    </div>
+
+    <div class="max-w-md mx-auto mt-16 bg-white rounded-xl shadow-lg">
+        <% for(let item of items) { %>
+
+            <form action="/?_method=DELETE" method="post">
+                <div class="h-20 flex items-center pl-8 border-b-2 last:border-b-0 hover:bg-gray-300">
+                    <input type="checkbox" class="w-5 h-5 checked:outline-none " onchange="this.form.submit()" name="item_id" value="<%= item._id %>">
+                    <p class="p-5 text-xl font-normal font-sans">
+                        <%= item.item %>
+                    </p>
+                </div>
+            </form>
+            <% } %>
+
+                <form action="/" method="post" class="item mb-16 hover:bg-gray-300 ">
+                    <input type="text"
+                        class="text-center h-16 border-none bg-transparent text-xl w-96 focus:outline-none focus:border-none shadow-md "
+                        name="item" placeholder="New Item" autocomplete="off">
+
+                    <button type="submit"
+                        class="bg-red-200 pb-2 rounded-3xl mx-auto h-12 w-12 font-bold text-3xl" value="<%= listTitle %>" name="listName">+</button>
+                </form>
+    </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Data</title>
+</head>
+<body>
+    <div>
+    <h1>Edit Product</h1>
+    <form action="/products/<%= product._id %>?_method=PUT" method="post" class="form">
+        <label for="product_name">Product Name</label>
+        <input type="text" name="name" id="product_name" value="<%= product.name %>">
+        <br><br>
+        <label for="product_price">Price (In $): </label>
+        <input type="number" name="price" id="product_price" value="<%= product.price %>">
+        <br><br>
+        <label for="product_category">Categories</label>
+
+        <select name="category" id="product_category">
+            <% for(let category of categories) { %> 
+               
+                <option value= "<%=category%>" <%= product.category === category ? 'selected' : '' %> > <%= category %></option>
+                
+            <% } %> 
+        </select>
+
+        <!-- <select name="category" id="product_category">
+            <option value="fruit"  <%= product.category==='fruit' ? 'selected' : '' %> >Fruit</option>
+            <option value="vegetable"  <%= product.category==='vegetable' ? 'selected' : '' %> >Vegetable</option>
+            <option value="dairy"   <%= product.category==='dairy' ? 'selected' : '' %> >Dairy</option>
+        </select> -->
+
+        <br><br>
+        <button type="submit">Submit Data</button>
+    </form>
+    <br><br>
+
+    <a href="/products/<%= product._id %>">Cancel</a>
+
+    
+   
+</div>
+  
+</body>
+</html>

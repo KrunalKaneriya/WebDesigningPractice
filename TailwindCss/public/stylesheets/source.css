@@ -1,0 +1,8 @@
+.hello {
+    color:red;
+    padding:3rem;
+}
+
+@tailwind base;
+@tailwind componenets;
+@tailwind utilities;
